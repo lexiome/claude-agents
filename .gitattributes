@@ -1,0 +1,2 @@
+# Keep Markdown agent and skill files in LF on every OS, so diffs stay clean.
+* text=auto eol=lf

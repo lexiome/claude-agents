@@ -16,6 +16,14 @@ Full guide: https://lexiome.ai/build/agents?s=github
 
 Agents sound sure even when wrong. A different agent checks the work, reviewers are read-only, and "done" means you saw it work live.
 
+## How to adapt it in 10 minutes
+
+1. **Pick 3 to 5 agents.** Delete the rest. Most projects start with `cto`, `developer` and `code-reviewer`, then add a reviewer for their riskiest area (security, legal or design).
+2. **Rewrite each agent's first paragraph** for your product: who the users are and what "done" means. Keep the rules about being read-only and reporting back.
+3. **Swap the domain rules.** Search for `health`, `clinical`, `PHI` and `consent`. Replace them with the risks your product has (payments, children's data, uptime), or delete them.
+4. **Fix the stack lines** (language, test command, lint command) in `CLAUDE.md` and in `developer.md`, so the checks the agents run are real ones.
+5. **Try one small task end to end:** plan, build, review. Wherever an agent got it wrong, add one line to that agent's file. That is how these files grew.
+
 ## Agents
 
 | Agent | Use it when |
@@ -37,6 +45,7 @@ Agents sound sure even when wrong. A different agent checks the work, reviewers 
 | `product-designer` | UI, UX, design system, accessibility |
 | `ux-copy-writer` | Every word a user reads: buttons, errors, consent, explainers |
 | `journey-tester` | Clicking through the app as a non-technical user (read-only) |
+| `frame-reviewer` | A fresh, read-only check of a finished video: frames, sound, script |
 
 ## Skills
 
